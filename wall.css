@@ -24,7 +24,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -60,14 +59,7 @@ header nav ul li a {
     justify-content: center;
   }
 
-  .search-box {
-    order: 1;
-    flex-basis: 100%;
-    max-width: none;
-  }
-
   header nav {
-    order: 2;
     width: 100%;
   }
 
