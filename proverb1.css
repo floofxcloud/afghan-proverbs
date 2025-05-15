@@ -25,7 +25,6 @@ header {
   gap: 10px;
 }
 
-
 header nav ul {
   list-style: none;
   padding: 0;
@@ -55,12 +54,6 @@ header nav ul li a {
 @media (max-width: 600px) {
   .header-container {
     justify-content: center;
-  }
-
-  .search-box {
-    order: 1;
-    flex-basis: 100%;
-    max-width: none;
   }
 
   header nav {
