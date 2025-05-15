@@ -8,10 +8,10 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-image: url(bgimage.jpg), url(background.jpg);
-  background-repeat: no-repeat, repeat;
-  background-position: 80% center, center;
-  background-size: 97%, cover;
+  background-image: url(background.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -59,39 +59,45 @@ header nav ul li a {
 }
 
 .nav-links li a:hover {
-    color: #a17f5ade;
+  color: #a17f5ade;
 }
+
 .nav-links a.active {
-    border-bottom: 3px solid #896c46db;
+  border-bottom: 3px solid #896c46db;
 }
+
 .intro-section {
-  text-align: center;
-  padding: 2rem;
   max-width: 800px;
-  margin: auto;
-  color: #4B3621;
+  margin: 5rem auto 6rem auto;
+  padding: 2rem;
+  background-color: #f8ecd49e; 
+  border: 1px solid #d3c2ac;
+  border-radius: 20px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
   font-family: 'Noto Serif', serif;
-  background: transparent;
   position: relative;
   z-index: 2;
-  margin-top: 5rem;
-  margin-bottom: 17rem;
 }
 
 .intro-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #5a3e1b;
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
+  color: #5c3a1e;
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #e4d6c4;
 }
 
 .intro-section p {
-  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  color: #3e2b1b;
+  line-height: 2;
   font-style: italic;
-  font-size: 1.3rem;
-  line-height: 1.9;
+  padding: 0 1rem;
 }
+
+
 .featured-proverbs h1 {
   font-size: 2.0rem;
   margin-bottom: 1rem;
@@ -100,6 +106,7 @@ header nav ul li a {
   font-weight: 600;
   text-align: center;
 }
+
 .featured-proverbs {
   display: grid;
   grid-template-columns: 1fr;
@@ -130,17 +137,20 @@ header nav ul li a {
   margin-bottom: 0.5rem;
   text-align: center;
 }
+
 .proverb-box p {
   font-size: 1.2rem;
   color: #634022f0;
   margin-bottom: 0.5rem;
   text-align: center;
 }
+
 .proverb-box .meaning {
   font-style: italic;
   color: #3f2c1a;
   text-align: center;
 }
+
 .proverb-box a {
   display: block;
   text-decoration: none;
@@ -168,39 +178,5 @@ footer {
   display: block;
   font-weight: bold;
   color: #713f0f;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 6px 0 4px 0;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-.social-icons a {
-  color: #5a3e1b;
-  font-size: 1rem;
-  margin: 0 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #8b5e34;
-  transform: scale(1.2);
-}
-
-.social-icons a i {
-  font-size: 0.9rem;
-}
-
-body > footer, body > .site-footer {
-  margin-top: auto;
+  text-decoration: none
 }
