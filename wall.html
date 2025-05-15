@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Wall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="wall.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="search-box">
+        <input type="text" placeholder="Search proverbs..." />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="proverbs.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="wall.html" class="active">Interactive Wall</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="wall">
+    <h2>Interactive Wall</h2>
+    <p class="wall-intro">Share your favorite Afghan proverb with us. Let your wisdom inspire others.</p>
+    <form id="proverbForm">
+      <label for="language">Language:</label>
+      <select id="language" name="language" required>
+        <option value="" disabled selected>Select a language</option>
+        <option value="Dari">Dari (Persian)</option>
+        <option value="Pashto">Pashto</option>
+        <option value="English">English</option>
+      </select>
+
+      <label for="proverb">Your Proverb:</label>
+      <textarea id="proverb" name="proverb" placeholder="Write your proverb..." maxlength="300" required></textarea>
+      <div class="char-count" id="charCount">0 / 300</div>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Fatima" required>
+
+      <button type="submit">Submit Proverb</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 All Rights Reserved created by: <strong>Setayesh Yousufi</strong></p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>

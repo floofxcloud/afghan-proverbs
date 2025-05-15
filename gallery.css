@@ -1,0 +1,183 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-image: url(background.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  background-color: rgba(141, 104, 69, 0.342);
+  color: white;
+  padding: 1rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-box {
+  position: absolute;
+  left: 0;
+}
+
+.search-box input[type="text"] {
+  padding: 0.4rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #96755a;
+  border-radius: 5px;
+  max-width: 150px;
+  width: 100%;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: rgb(87, 66, 43);
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.nav-links li a:hover {
+  color: #a17f5ade;
+}
+
+.nav-links a.active {
+  border-bottom: 3px solid #896c46db;
+}
+
+h2 {
+  color: #6d4b33;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #DAA520;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #b8860b;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+.proverb-card {
+  background-color: #FFF5DC;
+  border: 2px solid #DAA520;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+}
+
+.proverb-card:hover,
+.proverb-card:focus-within {
+  transform: scale(1.05);
+  background-color: #FFE4B5;
+}
+
+.meaning {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.hover-card:hover .meaning {
+  opacity: 1;
+}
+
+.site-footer {
+  background-color: rgba(141, 104, 69, 0.342);
+  color: #713f0f;
+  text-align: center;
+  padding: 8px 8px;
+  font-family: 'Georgia', serif;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+.site-footer a {
+  display: block;
+  font-weight: bold;
+  color: #713f0f;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0 4px 0;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: #5a3e1b;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8b5e34;
+  transform: scale(1.2);
+}
+
+.social-icons a i {
+  font-size: 0.9rem;
+}
