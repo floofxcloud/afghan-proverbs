@@ -29,21 +29,6 @@ header {
   gap: 10px;
 }
 
-.search-box {
-  position: static;
-  max-width: 150px;
-  flex: 1 1 150px;
-}
-
-.search-box input[type="text"] {
-  padding: 0.4rem;
-  background: rgba(255, 255, 255, 0.3);
-  border: 2px solid #96755a;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 header nav ul {
   list-style: none;
   padding: 0;
@@ -73,12 +58,6 @@ header nav ul li a {
 @media (max-width: 600px) {
   .header-container {
     justify-content: center;
-  }
-
-  .search-box {
-    order: 1;
-    flex-basis: 100%;
-    max-width: none;
   }
 
   header nav {
