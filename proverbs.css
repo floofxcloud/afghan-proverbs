@@ -180,3 +180,23 @@ footer {
   color: #713f0f;
   text-decoration: none
 }
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header nav ul {
+    justify-content: center;
+  }
+
+  .search-box {
+    order: 1;
+    width: 100%;
+  }
+
+  header nav {
+    order: 2;
+    width: 100%;
+  }
+}
