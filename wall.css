@@ -59,10 +59,11 @@ header nav ul li a {
 }
 
 .nav-links li a:hover {
-    color: #a17f5ade;
+  color: #a17f5ade;
 }
+
 .nav-links a.active {
-    border-bottom: 3px solid #896c46db;
+  border-bottom: 3px solid #896c46db;
 }
 
 #wall {
