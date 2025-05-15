@@ -25,11 +25,14 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-wrap: wrap; 
+  gap: 10px;
 }
 
 .search-box {
-  position: absolute;
-  left: 0;
+  position: static; 
+  max-width: 150px;
+  flex: 1 1 150px; 
 }
 
 .search-box input[type="text"] {
@@ -37,8 +40,8 @@ header {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid #96755a;
   border-radius: 5px;
-  max-width: 150px;
-  width: 100%;
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 header nav ul {
@@ -48,6 +51,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap; 
 }
 
 header nav ul li a {
@@ -66,11 +70,32 @@ header nav ul li a {
   border-bottom: 3px solid #896c46db;
 }
 
+@media (max-width: 600px) {
+  .header-container {
+    justify-content: center;
+  }
+
+  .search-box {
+    order: 1;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  header nav {
+    order: 2;
+    width: 100%;
+  }
+
+  header nav ul {
+    justify-content: center;
+  }
+}
+
 .intro-section {
   max-width: 800px;
   margin: 5rem auto 6rem auto;
   padding: 2rem;
-  background-color: #f8ecd49e; 
+  background-color: #f8ecd49e;
   border: 1px solid #d3c2ac;
   border-radius: 20px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
@@ -96,7 +121,6 @@ header nav ul li a {
   font-style: italic;
   padding: 0 1rem;
 }
-
 
 .featured-proverbs h1 {
   font-size: 2.0rem;
@@ -184,14 +208,14 @@ header nav ul li a {
   justify-content: center;
   align-items: center;
   margin: 6px 0 4px 0;
-  gap: 5px;
-  flex-wrap: wrap;
+  gap: 15px;
+  flex-wrap: nowrap; 
 }
 
 .social-icons a {
   color: #5a3e1b;
   font-size: 1rem;
-  margin: 0 10px;
+  margin: 0; 
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
