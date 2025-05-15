@@ -21,11 +21,14 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .search-box {
-  position: absolute;
-  left: 0;
+  position: static;
+  max-width: 150px;
+  flex: 1 1 150px;
 }
 
 .search-box input[type="text"] {
@@ -33,8 +36,8 @@ header {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid #96755a;
   border-radius: 5px;
-  max-width: 150px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 header nav ul {
@@ -44,6 +47,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 header nav ul li a {
@@ -60,6 +64,27 @@ header nav ul li a {
 
 .nav-links a.active {
   border-bottom: 3px solid #896c46db;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    justify-content: center;
+  }
+
+  .search-box {
+    order: 1;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  header nav {
+    order: 2;
+    width: 100%;
+  }
+
+  header nav ul {
+    justify-content: center;
+  }
 }
 
 main {
