@@ -23,28 +23,22 @@ header {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0 1rem;
+  justify-content: center;
   position: relative;
 }
 
 .search-box {
-  flex: 1 1 150px;
-  min-width: 140px;
+  position: absolute;
+  left: 0;
 }
 
 .search-box input[type="text"] {
-  width: 100%;
   padding: 0.4rem;
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid #96755a;
   border-radius: 5px;
-}
-
-header nav {
-  flex: 2 1 300px;
+  max-width: 150px;
+  width: 100%;
 }
 
 header nav ul {
@@ -52,8 +46,7 @@ header nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -72,6 +65,7 @@ header nav ul li a {
 .nav-links a.active {
   border-bottom: 3px solid #896c46db;
 }
+
 .intro-section {
   max-width: 800px;
   margin: 5rem auto 6rem auto;
@@ -163,13 +157,6 @@ header nav ul li a {
   color: inherit;
 }
 
-footer {
-  background-color: transparent;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
 .site-footer {
   background-color: rgba(141, 104, 69, 0.342);
   color: #713f0f;
@@ -177,32 +164,42 @@ footer {
   padding: 8px 8px;
   font-family: 'Georgia', serif;
   font-size: 0.8rem;
-  margin-top: 50px;
+  margin-top: auto;
 }
 
 .site-footer a {
   display: block;
   font-weight: bold;
   color: #713f0f;
-  text-decoration: none
+  text-decoration: none;
+  margin-top: 10px;
 }
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
 
-  header nav ul {
-    justify-content: center;
-  }
+.site-footer a:hover {
+  text-decoration: underline;
+}
 
-  .search-box {
-    order: 1;
-    width: 100%;
-  }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0 4px 0;
+  gap: 5px;
+  flex-wrap: wrap;
+}
 
-  header nav {
-    order: 2;
-    width: 100%;
-  }
+.social-icons a {
+  color: #5a3e1b;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8b5e34;
+  transform: scale(1.2);
+}
+
+.social-icons a i {
+  font-size: 0.9rem;
 }
